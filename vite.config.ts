@@ -3,7 +3,7 @@ import { UserConfig } from "vite";
 
 const config: UserConfig = {
     plugins: [pluginChecker({ typescript: true, overlay: false })],
-    base: "/",
+    base: "/Guitar-Hero-Game/",
 };
 
 const getConfig = () => config;
