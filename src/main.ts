@@ -1046,6 +1046,12 @@ function showKeys() {
 // The following simply runs your main function on window load.  Make sure to leave it in place.
 // You should not need to change this, beware if you are.
 if (typeof window !== "undefined") {
+    const { protocol, hostname, port } = new URL(import.meta.url);
+    const isGitHubPages = hostname.includes("darylboon.tech");
+    const baseUrl = isGitHubPages
+        ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
+        : "./";
+
     // Load in the instruments and then start your game!
     const samples = SampleLibrary.load({
         instruments: [
@@ -1057,7 +1063,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: "./samples/",
+        baseUrl: `${baseUrl}samples/`,
     });
 
     const startGame = (contents: string) => {
@@ -1069,9 +1075,6 @@ if (typeof window !== "undefined") {
             { once: true },
         );
     };
-
-    const { protocol, hostname, port } = new URL(import.meta.url);
-    const baseUrl = `${protocol}//${hostname}${port ? `:${port}` : ""}`;
 
     Tone.ToneAudioBuffer.loaded().then(() => {
         for (const instrument in samples) {
