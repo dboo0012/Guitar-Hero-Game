@@ -1049,9 +1049,8 @@ if (typeof window !== "undefined") {
     const { protocol, hostname, port } = new URL(import.meta.url);
     const isGitHubPages = hostname.includes("darylboon.tech");
     const baseUrl = isGitHubPages
-        ? "/Guitar-Hero-Game"
-        : // ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
-          "./";
+        ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
+        : "./";
 
     // Load in the instruments and then start your game!
     const samples = SampleLibrary.load({
