@@ -1,4 +1,4 @@
-# Guitar Hero
+# [Guitar Hero](http://darylboon.tech/Guitar-Hero-Game/)
 
 ## Usage
 
