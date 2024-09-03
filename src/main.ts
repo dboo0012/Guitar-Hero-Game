@@ -1063,7 +1063,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: `${baseUrl}samples/`,
+        baseUrl: `https://github.com/dboo0012/Guitar-Hero-Game/tree/main/samples`,
     });
 
     const startGame = (contents: string) => {
