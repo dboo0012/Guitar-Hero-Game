@@ -1048,9 +1048,17 @@ function showKeys() {
 if (typeof window !== "undefined") {
     const { protocol, hostname, port } = new URL(import.meta.url);
     const isGitHubPages = hostname.includes("darylboon.tech");
+
+    console.log("protocol", protocol);
+    console.log("hostname", hostname);
+    console.log("port", port);
+
     const baseUrl = isGitHubPages
-        ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
+        ? // ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
+          `dboo0012.github.io`
         : "./";
+
+    console.log("baseUrl", baseUrl);
 
     // Load in the instruments and then start your game!
     const samples = SampleLibrary.load({
@@ -1063,7 +1071,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: `${baseUrl}/assets/samples/`,
+        baseUrl: `./assets/samples/`,
     });
 
     const startGame = (contents: string) => {
