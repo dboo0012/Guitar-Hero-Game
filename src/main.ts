@@ -1054,8 +1054,7 @@ if (typeof window !== "undefined") {
     console.log("port", port);
 
     const baseUrl = isGitHubPages
-        ? // ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
-          `dboo0012.github.io`
+        ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
         : "./";
 
     console.log("baseUrl", baseUrl);
@@ -1071,7 +1070,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: `./assets/samples/`,
+        baseUrl: `${baseUrl}/assets/samples/`,
     });
 
     const startGame = (contents: string) => {
