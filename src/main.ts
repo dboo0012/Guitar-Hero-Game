@@ -1054,7 +1054,7 @@ if (typeof window !== "undefined") {
     console.log("port", port);
 
     const baseUrl = isGitHubPages
-        ? `${protocol}//${hostname}${port ? `:${port}` : ""}`
+        ? `${protocol}//${hostname}/Guitar-Hero-Game`
         : "./";
 
     console.log("baseUrl", baseUrl);
