@@ -1054,7 +1054,7 @@ if (typeof window !== "undefined") {
     console.log("port", port);
 
     const baseUrl = isGitHubPages
-        ? `${protocol}//github.com/dboo0012/Guitar-Hero-Game`
+        ? `${protocol}//${hostname}/Guitar-Hero-Game`
         : "./";
 
     console.log("baseUrl", baseUrl);
@@ -1070,7 +1070,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: `../assets/samples/`,
+        baseUrl: `${baseUrl}/assets/samples/`,
     });
 
     const startGame = (contents: string) => {
