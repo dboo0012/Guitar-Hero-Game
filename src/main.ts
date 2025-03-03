@@ -1075,7 +1075,7 @@ if (typeof window !== "undefined") {
             samples[instrument].release = 0.5;
         }
 
-        fetch(`${baseUrl}/assets/${Constants.SONG_NAME}.csv`)
+        fetch(`${baseUrl}/${Constants.SONG_NAME}.csv`)
             .then((response) => response.text())
             .then((text) => startGame(text))
             .catch((error) =>
