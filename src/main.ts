@@ -1056,7 +1056,7 @@ if (typeof window !== "undefined") {
             "trombone",
             "flute",
         ], // SampleLibrary.list,
-        baseUrl: `${baseUrl}/assets/samples/`,
+        baseUrl: `${baseUrl}/public/samples/`,
     });
 
     const startGame = (contents: string) => {

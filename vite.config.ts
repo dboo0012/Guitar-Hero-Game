@@ -1,11 +1,7 @@
 import pluginChecker from "vite-plugin-checker";
-import { UserConfig } from "vite";
+import { defineConfig } from "vite";
 
-const config: UserConfig = {
+export default defineConfig({
     plugins: [pluginChecker({ typescript: true, overlay: false })],
     base: "/Guitar-Hero-Game/",
-};
-
-const getConfig = () => config;
-
-export default getConfig;
+});
